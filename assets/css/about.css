@@ -1,0 +1,341 @@
+/* About Page Styles */
+
+/* Hero Section */
+.about-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 500px;
+  background-image: url('../images/about-hero.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hero-content h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.highlight-yellow {
+  color: var(--accent-yellow);
+}
+
+.hero-content p {
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-hero-enroll {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 32px;
+  background-color: var(--accent-yellow);
+  color: var(--primary-green);
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-hero-enroll:hover {
+  transform: translateY(-2px);
+  background-color: #dbe87a;
+}
+
+/* Common Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+/* Section Titles */
+.section-title-left {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.section-title-center {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Who We Are Section */
+.who-we-are-section {
+  background-color: #fff;
+}
+
+.who-we-are-text p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+
+/* History Section */
+.history-section {
+  background-color: var(--bg-light);
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.history-content p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+
+.history-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Values Section */
+.values-section {
+  background-color: #fff;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.value-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-color: var(--primary-green);
+}
+
+.value-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-green);
+  margin-bottom: 16px;
+}
+
+.value-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Proprietress Section */
+.proprietress-section {
+  background-color: #fff;
+}
+
+.proprietress-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Text wider than image */
+  gap: 60px;
+  align-items: start;
+}
+
+.proprietress-text p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+
+.proprietress-sign {
+  margin-top: 30px;
+}
+
+.proprietress-sign h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.proprietress-sign span {
+  font-size: 14px;
+  color: #888;
+}
+
+.proprietress-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  /* box-shadow: 0 10px 30px rgba(0,0,0,0.1); */ /* Optional shadow */
+}
+
+/* Academics & Curriculum */
+.academics-curriculum-section {
+  background-color: var(--bg-light);
+}
+
+.academics-text p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+
+/* Community Section */
+.community-section {
+  background-color: #fff;
+}
+
+.community-intro {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.community-intro p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  color: #4a4a4a;
+  text-align: left; /* Align text left as per standard readability or center? Screenshot seems justified or left. Let's stick to left for blocks. */
+}
+
+/* Override alignment for intro wrapper */
+.community-intro {
+  text-align: left;
+}
+
+.community-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.community-img-wrapper {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 250px; /* Fixed height for uniformity */
+}
+
+.community-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.community-img-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+/* CTA Section (Reusing from Home but ensure style exists here if not global) */
+.cta-section {
+  background-color: #0d1f12;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.btn-cta-enroll {
+  display: inline-block;
+  background-color: var(--accent-yellow);
+  color: var(--primary-green);
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-cta-enroll:hover {
+  transform: translateY(-2px);
+  background-color: #dbe87a;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .history-grid,
+  .proprietress-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .history-image,
+  .proprietress-image {
+    order: -1; /* Image on top on mobile? Or bottom? Usually top is better for context or bottom for flow. Let's keep it standard order or adjust. Screenshot has image on right. Mobile: Image usually goes on top or below. Let's leave order as is (text then image) or swap. */
+  }
+  
+  /* If we want image first on mobile for Proprietress: */
+  .proprietress-content .proprietress-image {
+      order: 1; /* Keep it below text on mobile as well, or change to -1 to be above. Let's keep below text as intro is important. */
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .community-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title-left,
+  .section-title-center {
+    font-size: 24px;
+  }
+  
+  .container {
+    padding: 40px 20px;
+  }
+}

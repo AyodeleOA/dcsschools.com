@@ -1,0 +1,15 @@
+
+CREATE TABLE IF NOT EXISTS enrollments (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  student_name VARCHAR(255) NOT NULL,
+  gender VARCHAR(32) NOT NULL,
+  dob DATE NOT NULL,
+  intended_class VARCHAR(64) NOT NULL,
+  parent_name VARCHAR(255) NOT NULL,
+  phone VARCHAR(64) NOT NULL,
+  email VARCHAR(128) NOT NULL,
+  relationship VARCHAR(64) NOT NULL,
+  address TEXT NULL,
+  status VARCHAR(32) DEFAULT 'pending',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

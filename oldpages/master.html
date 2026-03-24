@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/css/master.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    {% block head %}{% endblock %}
+</head>
+
+<!-- HTML -->
+<header class="topbar">
+    <div class="topbar-left">
+        <a href="https://anapeace.proskool.net/" class="login-link">Parent Login</a>
+    </div>
+
+    <div class="topbar-right">
+        <div class="topbar-item">
+            <img class="topbar-icon" src="assets/images/svgs/mail.svg" alt="Email">
+            <span>{{ settings.email|default('') }}</span>
+        </div>
+        <div class="topbar-item phone">
+            <img class="topbar-icon" src="assets/images/svgs/phone.svg" alt="Phone">
+            <span>{{ settings.phone|default('') }}</span>
+        </div>
+    </div>
+</header>
+
+<!-- HTML -->
+<nav class="main-navigation">
+  <div class="nav-logo">
+    <img src="assets/images/logo.png" alt="Anapeace British Academy Logo" class="nav-logo-img">
+    <span class="nav-logo-text">ANAPEACE BRITISH ACADEMY</span>
+  </div>
+
+  <div class="nav-menu">
+    <a href="{{ base_path }}/" class="nav-link {% if current_path == '/' %}nav-link-active{% endif %}">Home</a>
+    <a href="{{ base_path }}/about" class="nav-link {% if current_path == '/about' %}nav-link-active{% endif %}">About</a>
+    <a href="{{ base_path }}/academics" class="nav-link {% if current_path == '/academics' %}nav-link-active{% endif %}">Academics</a>
+    <a href="{{ base_path }}/contact" class="nav-link {% if current_path == '/contact' %}nav-link-active{% endif %}">Contact</a>
+  </div>
+
+  <a href="{{ base_path }}/enrollment" class="nav-enroll-btn">
+    <span>Enroll Now</span>
+    <img src="assets/images/svgs/uk2.svg" alt="" class="nav-arrow-icon">
+  </a>
+</nav>
+
+<body>
+    {% block content %}{% endblock %}
+</body>
+
+<!-- HTML -->
+<footer class="site-footer">
+  <div class="footer-main">
+    <!-- Column 1: Logo & Address + Social -->
+    <div class="footer-col footer-col-logo">
+      <div class="footer-logo">
+        <img src="assets/images/logo.png" alt="Anapeace British Academy" class="footer-logo-img">
+        <span class="footer-logo-text">ANAPEACE BRITISH ACADEMY</span>
+      </div>
+      <p class="footer-address">
+        {{ settings.address|default('') }}
+      </p>
+      <div class="footer-social">
+        {% for l in social_links %}
+        <a href="{{ l.url }}"><img src="{{ base_path }}/{{ l.icon_path }}" alt=""></a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Column 2: Useful Links -->
+    <div class="footer-col footer-col-links">
+      <h3 class="footer-col-title">Useful Links</h3>
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Admissions</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Get In Touch -->
+    <div class="footer-col footer-col-contact">
+      <h3 class="footer-col-title">Get In Touch</h3>
+      
+      <div class="contact-item">
+        <div class="contact-icon-circle">
+          <img src="assets/images/svgs/location.svg" alt="" class="contact-icon">
+        </div>
+        <p class="contact-text">
+         {{ settings.address|default('') }}
+        </p>
+      </div>
+
+      <div class="contact-item">
+         <div class="contact-icon-circle">
+        <img src="assets/images/svgs/mail.svg" alt="Email" class="contact-icon-inline">
+        </div>
+        <a href="mailto:{{ settings.email|default('') }}" class="contact-link">
+          {{ settings.email|default('') }}
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-icon-circle">
+          <img src="assets/images/svgs/phone.svg" alt="" class="contact-icon">
+        </div>
+        <a href="tel:{{ settings.phone|default('') }}" class="contact-link">{{ settings.phone|default('') }}</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <img src="img/line-7.svg" alt="" class="footer-divider">
+    <p class="footer-copyright">
+      Copyright © 2025 <span class="highlight">Anapeace British School</span> All Rights Reserved
+    </p>
+  </div>
+</footer>
+<script src="assets/js/script.js"></script>
+
+{% block script %}{% endblock %}
+
+</html>

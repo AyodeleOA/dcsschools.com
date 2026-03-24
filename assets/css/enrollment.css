@@ -1,0 +1,144 @@
+/* Enrollment Page CSS */
+/* Reusing variables from master.css */
+
+.enrollment-hero {
+    background-color: var(--bg-light);
+    padding: 60px clamp(16px, 5vw, 64px) 40px;
+    text-align: center;
+}
+
+.enrollment-title {
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 24px;
+}
+
+.enrollment-subtext {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.enrollment-form-section {
+    padding: 0 clamp(16px, 5vw, 64px) 80px;
+    background-color: var(--bg-light);
+}
+
+.enrollment-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.form-section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin: 32px 0 24px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+}
+
+.form-section-title:first-child {
+    margin-top: 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.col-span-12 { grid-column: span 12; }
+.col-span-6 { grid-column: span 6; }
+.col-span-4 { grid-column: span 4; }
+.col-span-3 { grid-column: span 3; }
+.col-span-8 { grid-column: span 8; }
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-label .required {
+    color: #e74c3c;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    width: 100%;
+    transition: all 0.3s;
+    background-color: #f9f9f9;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(46, 74, 51, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-submit-enroll {
+    background-color: var(--accent-yellow);
+    color: var(--primary-green);
+    border: none;
+    padding: 16px 48px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.btn-submit-enroll:hover {
+    background-color: #dbe87a;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(200, 214, 89, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .enrollment-form {
+        padding: 24px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .col-span-12, .col-span-6, .col-span-4, .col-span-3, .col-span-8 {
+        grid-column: span 1;
+    }
+}
