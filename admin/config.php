@@ -8,7 +8,7 @@ function env($key, $default = null) {
 define('DB_HOST', env('ANAPEACE_DB_HOST', '127.0.0.1'));
 define('DB_NAME', env('ANAPEACE_DB_NAME', 'divine_confidence'));
 define('DB_USER', env('ANAPEACE_DB_USER', 'root'));
-define('DB_PASS', env('ANAPEACE_DB_PASS', 'linux'));
+define('DB_PASS', env('ANAPEACE_DB_PASS', ''));
 
 define('UPLOAD_DIR', __DIR__ . '/../uploads');
 

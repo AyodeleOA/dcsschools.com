@@ -204,15 +204,15 @@ function nav_active($file)
       <div class="impact-content reveal fade-up" style="--delay: .06s">
         <div class="impact-grid">
           <div class="impact-card reveal zoom-in" style="--delay: .08s">
-            <span class="impact-number">10+</span>
+            <span class="impact-number">20+</span>
             <span class="impact-label">Years of Education</span>
           </div>
           <div class="impact-card reveal zoom-in" style="--delay: .12s">
-            <span class="impact-number">500+</span>
+            <span class="impact-number">5000+</span>
             <span class="impact-label">Students Taught</span>
           </div>
           <div class="impact-card reveal zoom-in" style="--delay: .16s">
-            <span class="impact-number">200+</span>
+            <span class="impact-number">500+</span>
             <span class="impact-label">Graduates</span>
           </div>
           <div class="impact-card reveal zoom-in" style="--delay: .2s">
@@ -366,6 +366,8 @@ function nav_active($file)
           <li><a href="https://dcsschools.com/pages/about.php">About Us</a></li>
           <li><a href="https://dcsschools.com/pages/contact.php">Contact Us</a></li>
           <li><a href="https://dcsschools.com/pages/about.php">Brief History</a></li>
+          <li><a href="https://www.youtube.com/@Divineconfidenceschoolmedia">Divine Confidence Media (YouTube)</a></li>
+           <li><a href="https://web.facebook.com/p/Divine-Confidence-School-100054429327233/?_rdc=1&_rdr#">Divine Confidence School (Facebook)</a></li>
         </ul>
       </div>
 
@@ -373,7 +375,9 @@ function nav_active($file)
       <div class="footer-col reveal fade-up" style="--delay: .18s">
         <h3 class="footer-col-title">Talk To Us</h3>
         <p class="contact-subtitle">Got Questions? Call us</p>
-        <a href="tel:<?php echo isset($settings['phone']) ? htmlspecialchars($settings['phone']) : '+2348179611109'; ?>" class="contact-big-phone reveal fade-up" style="--delay: .22s"><?php echo isset($settings['phone']) ? htmlspecialchars($settings['phone']) : '+234 817 961 1109'; ?></a>
+        <a href="tel:<?php echo isset($settings['phone']) ? htmlspecialchars($settings['phone']) : '+2348179611109'; ?>" class="contact-big-phone reveal fade-up" style="--delay: .22s">
+    <?php echo isset($settings['phone']) ? htmlspecialchars($settings['phone']) : '+234 817 961 1109, +234 805 521 3935'; ?>
+</a>
         <div class="contact-list reveal fade-up" style="--delay: .26s">
           <div class="contact-row reveal fade-up" style="--delay: .3s">
             <img src="../assets/images/mail.png" class="footer-icon" alt="Email">
